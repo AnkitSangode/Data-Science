@@ -96,14 +96,14 @@ def initiate_data_transformation(self,train_path,test_path):
         logging.info("Saved preprocessing object.")
 
         save_object(
-            file_path = self.data.transformation_config.preprocessor_obj_file_path,
+            file_path = self.data.transformation_config.preprocessor_ob_file_path,
             obj = preprocessing_obj
         )
 
         return (
             train_arr,
             test_arr,
-            self.data_transformation_config.preprocessor_obj_file_path,
+            self.data_transformation_config.preprocessor_ob_file_path,
         )
     except Exception as e:
         CustomException(e,sys)
